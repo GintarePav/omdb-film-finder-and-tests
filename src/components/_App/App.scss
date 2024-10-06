@@ -1,0 +1,43 @@
+@import "../../styles/_mixins";
+@import "../../styles/_variables.scss";
+
+* {
+  font-family: Calibri, "Trebuchet MS", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.App {
+  height: 100vh;
+
+  &__header {
+    height: 10%;
+
+    h1 {
+      padding-top: 35px;
+      text-align: center;
+    }
+  }
+
+  &__main {
+    min-height: 85%;
+    max-height: max-content;
+  }
+
+  &__footer {
+    height: 5%;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+}
+
+.film-card {
+  @include size(max-content, 100%);
+  @include flex(row, center, center);
+  padding: 10px 20px;
+
+  h4 {
+    padding: 20px;
+    text-align: center;
+  }
+}

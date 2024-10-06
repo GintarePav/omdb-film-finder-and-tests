@@ -1,0 +1,45 @@
+@import "../../styles/_mixins";
+@import "../../styles/_variables.scss";
+
+.search-section {
+  @include size(max-content, 100%);
+  @include flex(column, center, center);
+
+  form {
+    @include flex(row, center, center);
+    gap: 10px;
+    margin: 35px 0px;
+
+    input {
+      @include size(35px, 165px);
+      border: none;
+      border-bottom: 1px solid $black;
+    }
+
+    input:nth-child(2) {
+      width: 45px;
+    }
+
+    button {
+      @include size(35px, 70px);
+      border: none;
+      border-radius: 3px;
+      background-color: $black;
+      color: $white;
+      font-weight: bold;
+      padding: 5px;
+      cursor: pointer;
+
+      &:hover,
+      &:active {
+        background-color: lighten($black, 10%);
+        box-shadow: 0 4px 8px $shadow;
+      }
+    }
+  }
+
+  &__empty-message {
+    text-align: center;
+    font-style: italic;
+  }
+}
